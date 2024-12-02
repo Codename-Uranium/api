@@ -38,8 +38,8 @@ type Node struct {
 
 // NodeAddress defines model for NodeAddress.
 type NodeAddress struct {
-	Priority *int    `json:"priority,omitempty"`
-	Uri      *string `json:"uri,omitempty"`
+	Priority int    `json:"priority"`
+	Uri      string `json:"uri"`
 }
 
 // NodeRecord defines model for NodeRecord.

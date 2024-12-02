@@ -491,6 +491,9 @@ components:
           format: uri
         priority:
           type: integer
+      required:
+        - uri
+        - priority
     Node:
       title: Node
       type: object
