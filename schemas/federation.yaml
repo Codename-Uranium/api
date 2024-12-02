@@ -482,6 +482,15 @@ components:
       enum:
         - enabled
         - disabled
+    NodeAddress:
+      title: NodeAddress
+      type: object
+      properties:
+        uri:
+          type: string
+          format: uri
+        priority:
+          type: integer
     Node:
       title: Node
       type: object
@@ -489,13 +498,7 @@ components:
         addresses:
           type: array
           items:
-            type: object
-            properties:
-              uri:
-                type: string
-                format: uri
-              priority:
-                type: integer
+            $ref: '#/components/schemas/NodeAddress'
         labels:
           type: object
         state:

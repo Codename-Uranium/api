@@ -34,15 +34,18 @@ const (
 
 // Node defines model for Node.
 type Node struct {
-	Addresses *[]struct {
-		Priority *int    `json:"priority,omitempty"`
-		Uri      *string `json:"uri,omitempty"`
-	} `json:"addresses,omitempty"`
-	Created *time.Time              `json:"created,omitempty"`
-	Healthy *bool                   `json:"healthy,omitempty"`
-	Labels  *map[string]interface{} `json:"labels,omitempty"`
-	State   *NodeState              `json:"state,omitempty"`
-	Updated *time.Time              `json:"updated,omitempty"`
+	Addresses *[]NodeAddress          `json:"addresses,omitempty"`
+	Created   *time.Time              `json:"created,omitempty"`
+	Healthy   *bool                   `json:"healthy,omitempty"`
+	Labels    *map[string]interface{} `json:"labels,omitempty"`
+	State     *NodeState              `json:"state,omitempty"`
+	Updated   *time.Time              `json:"updated,omitempty"`
+}
+
+// NodeAddress defines model for NodeAddress.
+type NodeAddress struct {
+	Priority *int    `json:"priority,omitempty"`
+	Uri      *string `json:"uri,omitempty"`
 }
 
 // NodeRecord defines model for NodeRecord.
