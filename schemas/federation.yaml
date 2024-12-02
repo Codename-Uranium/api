@@ -489,8 +489,13 @@ components:
         addresses:
           type: array
           items:
-            type: string
-            format: uri
+            type: object
+            properties:
+              uri:
+                type: string
+                format: uri
+              priority:
+                type: integer
         labels:
           type: object
         state:
